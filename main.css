@@ -1,0 +1,295 @@
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+p{
+    color: #666;
+}
+
+#nav-mc{
+    background: rgba(0,0,0,0.65);
+    padding: 40px 0 !important;
+}
+
+#nav-mc a, #nav-mc h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#nav-mc a:hover{text-decoration: none;}
+
+.mc-nav{
+    display: contents;
+}
+
+.mc-nav i{
+    font-size:30px;
+}
+
+.mc-restaurant{
+    background: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /*
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+    moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+    */
+}
+
+.mc-restaurant a{text-decoration: none; color:#fff;}
+
+.restaurant-details-text{
+    background-color: rgba(0,0,0,0.5);
+    padding: 25px 15px;
+}
+
+.restaurant-details-box{
+    padding-top: 41%;}
+
+.restaurant-details-text h2,h3{
+    margin: 0;
+}
+
+.restaurant-details-text h3{
+    font-weight: 100;
+}
+
+.mc-slider img{
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.mc-details p, .mc-details a{
+    text-decoration: none;
+    color: #666;
+    font-size: 24px;
+    margin: 0;
+}
+
+.mc-separator{
+    margin-top: 50px;
+}
+
+#accordion{
+    width: 100%;
+}
+
+#accordion p{margin: 0;}
+
+#accordion .btn{padding: 0; font-size: 24px; text-decoration: none;}
+
+.kategorie-dunkel .card-header{
+    background-color: rgba(0,0,0,0.7);
+}
+
+.kategorie-dunkel .btn {
+    color: #fff;
+}
+
+.kategorie-hell .btn{
+    color: #000;
+}
+
+.mc-restaurant-single h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.mc-speise-titel strong, .mc-speise-preis i strong{font-size:120%; color: #000;}
+
+.mc-single-item{
+    border-bottom: 1px dashed #666666;
+    padding: 10px 0;
+}
+
+.mc-speise-beschreibung{
+    margin-top: 5px;
+}
+
+.mc-speise-kategorie{
+    margin-top: 5px;
+}
+
+.card{
+    margin: 10px 0;
+}
+
+.btn-mc{
+    padding: 20px 30px;
+    background-color: #666;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 30px;
+    border: 2px solid #666;
+}
+
+.btn-mc:hover{
+    background-color: #fff;
+    color: #666;
+    border: 2px solid #666;
+}
+
+.mc-login .mc-separator{
+    margin-top: 150px;
+}
+
+.mc-login{
+    background: url("login.jpg");
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    min-height: 1000px;
+}
+
+.mc-restaurant-single-bg{
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    min-height: 600px;
+}
+
+.mc-login-form{
+    background-color: rgba(255,255,255,0.3);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+
+.mc-login form{
+    color: #fff;
+    font-size: 30px;
+}
+
+.btn-mc-edit{
+    padding: 10px 15px;
+    background-color: #e7e7e7;
+    color: #666;
+    font-size: 20px;
+    width: 70%;
+    border: 2px solid #e7e7e7;
+}
+
+.btn-mc-edit:hover{
+    background-color: #fff;
+    color: #666;
+    border: 2px solid #e7e7e7;
+}
+
+.mc-category-list-item strong{
+    font-size: 120%;
+    color: #000;
+}
+
+.mc-category-list-item a{
+    text-decoration: none;
+    color: #000;
+}
+
+.mc-edit-small{
+    background-color: #fff;
+    border: none;
+    padding: 0px;
+}
+
+.mc-edit-small:hover{
+    color: #666;
+}
+
+.mc-category-list-item a:hover{
+    color: #666;
+}
+
+.mc-category-list-item i{
+    margin-left: 15px;
+    font-size: 120%;
+}
+
+.mc-category-list-item{
+    border-bottom: 1px dashed #666666;
+    padding: 10px 0;
+}
+
+.mc-menu-item-edit i{
+    margin-left: 15px;
+    font-size: 120%;
+}
+
+.mc-menu-item-edit a{
+   color: #000;
+    text-decoration: none;
+}
+
+.mc-menu-item-edit a:hover{
+    color: #666;
+}
+
+.btn-mc-delete{
+    padding: 10px 15px;
+    background-color: #ff1919;
+    border: 2px solid #ff1919;
+    color: #fff;
+    font-size: 20px;
+    width: 70%;
+}
+
+.btn-mc-delete:hover{
+    background-color: #fff;
+    border: 2px solid #ff1919;
+    color: #ff1919;
+}
+
+.mc-my-restaurants i {
+    margin-left: 15px;
+}
+
+.mc-new-restaurant{
+    background: url("12.jpg");
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    min-height: 1000px;
+}
+
+.mc-new-restaurant form{
+    color: #fff;
+    font-size: 30px;
+}
+
+.form-control-file{
+    font-size: 24px;
+}
+
+.mc-new-restaurant-form{
+    background-color: rgba(0,0,0,0.3);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.close{
+    font-size: 80px;
+    line-height: 35px;
+}
+
+@media only screen and (max-width: 992px){
+    .mc-login{min-height: 400px;}
+}
+
+@media only screen and (max-width: 768px){
+    .btn-mc-edit, .btn-mc-delete{width: 100%;}
+
+}
+
+@media only screen and (max-width: 579px){
+    .mc-nav i{margin-bottom: 15px; color: #fff !important;}
+    .mc-nav{display: block;}
+    .mc-details a, .mc-details p, .mc-details i{font-size:20px;}
+    .mc-menu-item-edit{margin-top: 10px;}
+    .mc-menu-item-edit i{margin-left: 0px; margin-right:15px;}
+    .form-control-file{font-size: 15px;}
+    .mc-login .mc-separator{margin-top: 30px;}
+}
+

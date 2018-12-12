@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS, JS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Font-Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- eigenes CSS -->
+    <link rel="stylesheet" href="main.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <title>Hans im Glück - Restaurant Lister Dresden</title>
+</head>
+<body>
+<!-- Navbar -->
+<div class="mc-restaurant-single-bg" style="background-image: url('1.jpg')">
+<nav class="navbar" id="nav-mc">
+    <div class="container-fluid">
+        <div class="col mc-nav">
+            <i class="fas fa-user" style="color:#fff;"></i>
+            <h1>Mein Restaurant - Hans im Glück</h1>
+            <a href="my-restaurants.html"><i class="fas fa-arrow-left" style="color:#fff;"></i></a>
+        </div>
+    </div>
+</nav>
+</div>
+<div class="container">
+    <div class="row mc-separator"></div>
+    <div class="row">
+        <div class="col12 col-md-6 text-left mc-edit">
+            <p><button  type="button" data-toggle="modal" data-target="#sliderbild-bearbeiten-pop-up" class="btn btn-mc-edit">Sliderbild bearbeiten</button></p>
+            <p><button  type="button" data-toggle="modal" data-target="#informationen-bearbeiten-pop-up" class="btn btn-mc-edit">Informationen bearbeiten</button></p>
+            <p><button  class="btn btn-mc-delete">Restaurant löschen</button></p>
+        </div>
+        <div class="col12 col-md-6 text-right mc-details">
+            <a href="#">www.hans-im-glueck.de<i class="fas fa-globe" style="margin-left: 20px;"></i></a>
+            <p>Altmarkt 24, 01067 Dresden<i class="fas fa-map-marker-alt" style="margin-left: 20px;"></i></p>
+            <a href="tel:0123456789">0123 456 789<i class="fa fa-phone" style="margin-left: 20px;"></i></a>
+        </div>
+    </div>
+</div>
+<div class="row mc-separator">
+</div>
+<div class="container mc-restaurant-single">
+    <h2>Dein Menü</h2>
+</div>
+<div class="container">
+    <div id="accordion">
+        <div class="card kategorie-hell">
+            <div class="card-header" id="headingOne">
+                <h3 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Kategorien bearbeiten
+                    </button>
+                </h3>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <div class="row mc-category-list-item">
+                        <div class="col-8">
+                            <strong>Vorspeise</strong>
+                        </div>
+                        <div class="col-4 text-right">
+                            <button class="mc-edit-small" type="button" data-toggle="modal" data-target="#kategorie-bearbeiten-pop-up" ><i class="fas fa-pen"></i></button>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="row mc-category-list-item">
+                        <div class="col-8">
+                            <strong>Hauptgerichte</strong>
+                        </div>
+                        <div class="col-4 text-right">
+                            <button class="mc-edit-small" type="button" data-toggle="modal" data-target="#kategorie-bearbeiten-pop-up" ><i class="fas fa-pen"></i></button>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="row mc-category-list-item">
+                        <div class="col-8">
+                            <strong>Desserts</strong>
+                        </div>
+                        <div class="col-4 text-right">
+                            <button class="mc-edit-small" type="button" data-toggle="modal" data-target="#kategorie-bearbeiten-pop-up" ><i class="fas fa-pen"></i></button>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="row mc-category-list-item">
+                        <div class="col-8">
+                            <strong>Getränke</strong>
+                        </div>
+                        <div class="col-4 text-right">
+                            <button class="mc-edit-small" type="button" data-toggle="modal" data-target="#kategorie-bearbeiten-pop-up" ><i class="fas fa-pen"></i></button>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card kategorie-dunkel">
+            <div class="card-header" id="headingTwo">
+                <h3 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Speisen bearbeiten
+                    </button>
+                </h3>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    <div class="row mc-single-item">
+                        <div class="col-12  col-md-8 mc-speise-titel">
+                            <strong>Bruschetta</strong>
+                        </div>
+                        <div class="col-12 col-md-2 mc-speise-preis text-sm-right">
+                            <i><strong>2,80 EUR</strong></i>
+                        </div>
+                        <div class="col-12 col-md-2 mc-menu-item-edit text-sm-right">
+                            <button class="mc-edit-small" type="button" data-toggle="modal" data-target="#menu-item-bearbeiten-pop-up" ><i class="fas fa-pen"></i></button>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                        <div class="col-12 mc-speise-beschreibung">
+                            <p>Vorspeise aus klein gewürfelten Tomaten mit Öl und Gewürzen auf geröstetem Brot</p>
+                        </div>
+                        <div class="col-12 mc-speise-kategorie">
+                            <p><strong>Vorspeise</strong></p>
+                        </div>
+                    </div>
+                    <div class="row mc-single-item">
+                        <div class="col-12  col-md-8 mc-speise-titel">
+                            <strong>Bruschetta</strong>
+                        </div>
+                        <div class="col-12 col-md-2 mc-speise-preis text-sm-right">
+                            <i><strong>2,80 EUR</strong></i>
+                        </div>
+                        <div class="col-12 col-md-2 mc-menu-item-edit text-sm-right">
+                            <button class="mc-edit-small" type="button" data-toggle="modal" data-target="#menu-item-bearbeiten-pop-up" ><i class="fas fa-pen"></i></button>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                        <div class="col-12 mc-speise-beschreibung">
+                            <p>Vorspeise aus klein gewürfelten Tomaten mit Öl und Gewürzen auf geröstetem Brot</p>
+                        </div>
+                        <div class="col-12 mc-speise-kategorie">
+                            <p><strong>Vorspeise</strong></p>
+                        </div>
+                    </div>
+                    <div class="row mc-single-item">
+                        <div class="col-12  col-md-8 mc-speise-titel">
+                            <strong>Bruschetta</strong>
+                        </div>
+                        <div class="col-12 col-md-2 mc-speise-preis text-sm-right">
+                            <i><strong>2,80 EUR</strong></i>
+                        </div>
+                        <div class="col-12 col-md-2 mc-menu-item-edit text-sm-right">
+                            <button class="mc-edit-small" type="button" data-toggle="modal" data-target="#menu-item-bearbeiten-pop-up" ><i class="fas fa-pen"></i></button>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                        <div class="col-12 mc-speise-beschreibung">
+                            <p>Vorspeise aus klein gewürfelten Tomaten mit Öl und Gewürzen auf geröstetem Brot</p>
+                        </div>
+                        <div class="col-12 mc-speise-kategorie">
+                            <p><strong>Vorspeise</strong></p>
+                        </div>
+                    </div>
+                    <div class="row mc-single-item">
+                        <div class="col-12  col-md-8 mc-speise-titel">
+                            <strong>Bruschetta</strong>
+                        </div>
+                        <div class="col-12 col-md-2 mc-speise-preis text-sm-right">
+                            <i><strong>2,80 EUR</strong></i>
+                        </div>
+                        <div class="col-12 col-md-2 mc-menu-item-edit text-sm-right">
+                            <button class="mc-edit-small" type="button" data-toggle="modal" data-target="#menu-item-bearbeiten-pop-up" ><i class="fas fa-pen"></i></button>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                        <div class="col-12 mc-speise-beschreibung">
+                            <p>Vorspeise aus klein gewürfelten Tomaten mit Öl und Gewürzen auf geröstetem Brot</p>
+                        </div>
+                        <div class="col-12 mc-speise-kategorie">
+                            <p><strong>Vorspeise</strong></p>
+                        </div>
+                    </div>
+                    <div class="row mc-single-item">
+                        <div class="col-12  col-md-8 mc-speise-titel">
+                            <strong>Bruschetta</strong>
+                        </div>
+                        <div class="col-12 col-md-2 mc-speise-preis text-sm-right">
+                            <i><strong>2,80 EUR</strong></i>
+                        </div>
+                        <div class="col-12 col-md-2 mc-menu-item-edit text-sm-right">
+                            <button class="mc-edit-small" type="button" data-toggle="modal" data-target="#menu-item-bearbeiten-pop-up" ><i class="fas fa-pen"></i></button>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                        <div class="col-12 mc-speise-beschreibung">
+                            <p>Vorspeise aus klein gewürfelten Tomaten mit Öl und Gewürzen auf geröstetem Brot</p>
+                        </div>
+                        <div class="col-12 mc-speise-kategorie">
+                            <p><strong>Vorspeise</strong></p>
+                        </div>
+                    </div>
+                    <div class="row mc-single-item">
+                        <div class="col-12  col-md-8 mc-speise-titel">
+                            <strong>Bruschetta</strong>
+                        </div>
+                        <div class="col-12 col-md-2 mc-speise-preis text-sm-right">
+                            <i><strong>2,80 EUR</strong></i>
+                        </div>
+                        <div class="col-12 col-md-2 mc-menu-item-edit text-sm-right">
+                            <button class="mc-edit-small" type="button" data-toggle="modal" data-target="#menu-item-bearbeiten-pop-up" ><i class="fas fa-pen"></i></button>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                        <div class="col-12 mc-speise-beschreibung">
+                            <p>Vorspeise aus klein gewürfelten Tomaten mit Öl und Gewürzen auf geröstetem Brot</p>
+                        </div>
+                        <div class="col-12 mc-speise-kategorie">
+                            <p><strong>Vorspeise</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pop-Up Sliderbild bearbeiten -->
+<div class="modal fade" id="sliderbild-bearbeiten-pop-up" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Titelbild aussuchen</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+               <form>
+                <div class="form-group">
+                    <input type="file" class="form-control-file" id="input-picture">
+                </div>
+               </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbruch</button>
+                <button type="button" class="btn btn-primary">Speichern</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pop-Up Informationen bearbeiten -->
+<div class="modal fade" id="informationen-bearbeiten-pop-up" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Informationen bearbeiten</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="input-website">Webseite</label>
+                        <input type="website" class="form-control" id="input-website" placeholder="Webseite angeben">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-password">Adresse</label>
+                        <input type="adress" class="form-control" id="input-password" placeholder="Adresse angeben">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-phone">Telefonnummer</label>
+                        <input type="phone" class="form-control" id="input-phone" placeholder="Telefonnummer angeben">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbruch</button>
+                <button type="button" class="btn btn-primary">Speichern</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pop-Up Kategorie bearbeiten -->
+<div class="modal fade" id="kategorie-bearbeiten-pop-up" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Kategorie bearbeiten</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="input-kategorie-name">Kategoriename</label>
+                        <input type="kategorie-name" class="form-control" id="edit-kategorie-name" placeholder="Kategoriename">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbruch</button>
+                <button type="button" class="btn btn-primary">Speichern</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pop-Up Menu-Item bearbeiten -->
+<div class="modal fade" id="menu-item-bearbeiten-pop-up" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Menü Position bearbeiten</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="input-menu-item-name">Name</label>
+                        <input type="menu-item-name" class="form-control" id="edit-menu-item-name" placeholder="Bruschetta">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-menu-item-preis">Preis</label>
+                        <input type="menu-item-preis" class="form-control" id="edit-menu-item-preis" placeholder="0,00EUR">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-menu-item-description">Beschreibung</label>
+                        <input type="menu-item-description" class="form-control" id="edit-menu-item-description" placeholder="Vorspeise aus klein gewürfelten Tomaten mit Öl und Gewürzen auf geröstetem Brot">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbruch</button>
+                <button type="button" class="btn btn-primary">Speichern</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mc-separator">
+</div>
+<div class="row mc-separator">
+</div>
+</body>
+</html>
