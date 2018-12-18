@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS, JS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="/js/jquery.cookie.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- Font-Awesome Icons -->
@@ -29,47 +30,90 @@
     </div>
 </nav>
 
-<div class="row no-gutters">
-    <div class="col-12 col-lg-3 mc-restaurant" style="background-image: url('1.jpg');">
-        <a href="restaurant-single-logged-in.html">
-            <div class="restaurant-details-box">
-                <div class="restaurant-details-text text-left">
-                    <h2><strong>Hans im Glück</strong></h2>
-                    <h4>Altmarkt 24, 01067 Dresden</h4>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-12 col-lg-3 mc-restaurant" style="background-image: url('2.jpg');">
-        <a href="#">
-            <div class="restaurant-details-box">
-                <div class="restaurant-details-text text-left">
-                    <h2><strong>Hans im Glück</strong></h2>
-                    <h4>Altmarkt 24, 01067 Dresden</h4>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-12 col-lg-3 mc-restaurant" style="background-image: url('3.jpg');">
-        <a href="#">
-            <div class="restaurant-details-box">
-                <div class="restaurant-details-text text-left">
-                    <h2><strong>Hans im Glück</strong></h2>
-                    <h4>Altmarkt 24, 01067 Dresden</h4>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-12 col-lg-3 mc-restaurant" style="background-image: url('4.jpg');">
-        <a href="#">
-            <div class="restaurant-details-box">
-                <div class="restaurant-details-text text-left">
-                    <h2><strong>Hans im Glück</strong></h2>
-                    <h4>Altmarkt 24, 01067 Dresden</h4>
-                </div>
-            </div>
-        </a>
-    </div>
+<script>
+  $.ajax({
+    url: 'https://restaurant.sneppo.de/user/restaurants',
+    type: 'GET',
+    headers: {
+      "Authorization": $.cookie('jwt_token')
+    },
+    contentType: 'application/json',
+    charset: 'utf-8'
+  }).done(function(data){
+    createRestaurants(data);
+  }).fail(function(data){
+    window.location = "/login.html";
+  });
+
+  function createRestaurants(restaurants){
+    var chunks = [];
+    while(restaurants.length){
+      chunks.push(restaurants.splice(0,4));
+    }
+    for(var i = 0; i < chunks.length; i++){
+      var htmlElement = '<div class="row no-gutter">';
+      for(var j = 0; j < chunks[i].length; j++){
+        htmlElement += createRestaurant(chunks[i][j]);
+      }
+      htmlElement += '</div>';
+      $('.content').empty();
+      $('.content').append(htmlElement);
+    }
+  }
+
+  function createRestaurant(restaurant){
+    return '<div class="col-12 col-lg-3 mc-restaurant" style="background-image: url(https://restaurant.sneppo.de' + restaurant.image_url + ');">' +
+    '<a href="restaurant-single.html">' +
+    '<div class="restaurant-details-box">' +
+    '<div class="restaurant-details-text text-left">' +
+    '<h2><strong>' + restaurant.name + '</strong></h2>' +
+    '<h4>' + restaurant.address + '</h4>' +
+    '</div></div></a></div>';
+  }
+</script>
+<div class="content">
+  <div class="row no-gutters">
+      <div class="col-12 col-lg-3 mc-restaurant" style="background-image: url('1.jpg');">
+          <a href="restaurant-single-logged-in.html">
+              <div class="restaurant-details-box">
+                  <div class="restaurant-details-text text-left">
+                      <h2><strong>Hans im Glück</strong></h2>
+                      <h4>Altmarkt 24, 01067 Dresden</h4>
+                  </div>
+              </div>
+          </a>
+      </div>
+      <div class="col-12 col-lg-3 mc-restaurant" style="background-image: url('2.jpg');">
+          <a href="#">
+              <div class="restaurant-details-box">
+                  <div class="restaurant-details-text text-left">
+                      <h2><strong>Hans im Glück</strong></h2>
+                      <h4>Altmarkt 24, 01067 Dresden</h4>
+                  </div>
+              </div>
+          </a>
+      </div>
+      <div class="col-12 col-lg-3 mc-restaurant" style="background-image: url('3.jpg');">
+          <a href="#">
+              <div class="restaurant-details-box">
+                  <div class="restaurant-details-text text-left">
+                      <h2><strong>Hans im Glück</strong></h2>
+                      <h4>Altmarkt 24, 01067 Dresden</h4>
+                  </div>
+              </div>
+          </a>
+      </div>
+      <div class="col-12 col-lg-3 mc-restaurant" style="background-image: url('4.jpg');">
+          <a href="#">
+              <div class="restaurant-details-box">
+                  <div class="restaurant-details-text text-left">
+                      <h2><strong>Hans im Glück</strong></h2>
+                      <h4>Altmarkt 24, 01067 Dresden</h4>
+                  </div>
+              </div>
+          </a>
+      </div>
+  </div>
 </div>
 <div class="container">
     <div class="mc-separator"></div>
